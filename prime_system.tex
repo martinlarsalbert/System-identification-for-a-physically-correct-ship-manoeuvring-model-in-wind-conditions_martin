@@ -1,0 +1,11 @@
+Variables within some of the equations in this paper are expressed using non dimensional units with the prime system and are then denoted by the prime symbol ($'$). Variables are converted from SI units to the prime system using the denominators in \autoref{tab:prime_system} in \autoref{sec:prime_system_table} for the corresponding physical quantity; where: $U$, and $L$ are the velocity and length between perpendiculars of the ship, and $\rho$ is the water density.
+For the calculation of surge velocity $u'$ the perturbed velocity $(u-U_0)$ about a nominal speed $U_0$ is used as seen in \autoref{eq:u_prime}. This is to avoid that $u'$ is 1 for all speeds when the ship is on a straight course (where $u=U$) as in a resistance or self propulsion test. The usage of the perturbed velocity therefore allows for higher order resistance terms in the model such as $X_{u}$, which would otherwise not be possible. 
+\begin{equation}
+    \label{eq:u_prime}
+    u' = \frac{u-U_0}{U}
+\end{equation}
+In order to have a non dimensional model, $U_0$ is instead expressed as a Froude number within the model (\autoref{eq:Fn0}), where $F_{n0}=0.02$ is used in this paper.
+\begin{equation}
+    \label{eq:Fn0}
+    F_{n0} = \frac{U_0}{\sqrt{g \cdot L}}
+\end{equation}

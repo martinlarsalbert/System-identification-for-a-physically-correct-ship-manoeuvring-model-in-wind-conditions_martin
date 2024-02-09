@@ -1,0 +1,29 @@
+The objective of this paper is to investigate the physical correctness of the Abkowitz model and the Physics informed model when the parameters are identified by inverse dynamics regression (ID regression, \autoref{sec:inverse_dynamics}) on a set of calm water zigzag manoeuvres. 
+%
+The research workflow is summarized in \autoref{fig:methodology}. The workflow consists of two separate sub-processes: on the left hand side the VCT regression (\autoref{sec:VCT_regression}) identifies a Reference model, and on the right hand side the inverse dynamics regression identifies the Abkowitz, and the Physics informed model.
+These models are validated by comparison with the Reference model on the model tests and an idealized wind condition.
+The Reference model has the Physics informed model structure, but with parameters identified with VCT regression (\autoref{sec:VCT_regression}). 
+%The resulting models have been named according to \autoref{tab:model_names}.
+The Reference model is assumed to be the more physically correct model, compared to the other two, since it is based on direct CFD calculations of the hydrodynamic forces from a controlled parameter variation.
+%
+\begin{figure}[h]
+    \centering
+    \includesvg[width=\columnwidth, pretex=\scriptsize, height=12cm]{figures/methodology2.svg}
+    \caption{Research workflow.}
+    \label{fig:methodology}
+\end{figure}
+%
+% ToDo: Why 3 methods?
+%\begin{table}[h]
+%    \caption{Model names are defined by the model structure and regression type.}
+%    \label{tab:model_names}
+%    \centering
+%    \begin{tabular}{l l l}
+%        Model name                           & Structure      & Regression \\
+%        \hline
+%        Reference model & Physics informed & VCT                         \\
+%        Physics informede ID  & Physics informed & ID         \\
+%        %        Abkowitz VCT & Abkowitz & VCT \\
+%        Abkowitz ID                          & Abkowitz       & ID         \\
+%    \end{tabular}
+%\end{table}

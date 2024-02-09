@@ -1,0 +1,7 @@
+Some points to consider:
+\begin{itemize}
+    \item Having accurate values for the added masses is very important for the inverse dynamics to deliver forces of the correct magnitude; Especially when a deterministic model such as the semi-empirical rudder is combined with data driven models such as the hull model in this paper. 
+    \item The semi-empirical rudder was actually not treated as an entirely deterministic model in this paper; The flow straightening coefficients $\kappa_v$ and $\kappa_r$ where determined from the VCT as well as the rudder hull interaction coefficients $a_H$ and $x_H$. For the time being, some VCT are therefore needed for this model. In the future, when more experience is gained about these coefficients, semi-empirical expressions or rules of thumb can hopefully be developed to make the model fully deterministic.
+    \item Persistence of excitation -- the zigzag test is not very informative \citep{sutulo_algorithm_2014}.
+    \item For instance Pseudo-Random Binary Sequences (PRBS) \citep{landau_digital_2006} is more informative.
+\end{itemize}

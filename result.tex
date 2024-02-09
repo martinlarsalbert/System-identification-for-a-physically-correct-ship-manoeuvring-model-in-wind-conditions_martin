@@ -1,0 +1,13 @@
+The parameters within the models (see \autoref{tab:parameters}) were identified: for the Reference model with VCT regression, for the Abkowitz, and the Physics informed model with inverse dynamics regression (as described in the methodology \autoref{sec:methodology}). 
+
+The parameters used for the semi-empirical rudders are shown in \autoref{tab:other_parameters}. Some manual tuning of the rudder drag was necessary, especially in the neutral rudder case, where the drag was increased almost 8 times as seen for $C_{D0tune}$. The rudder hull interaction coefficient $a_H$ was set to 0.12, so that 12\% of the rudder force is being generated on the ship hull.
+\begin{table}[h]
+    \centering
+    \caption{Identified parameter values.}
+    \label{tab:parameters}
+    \pgfplotstabletypeset[col sep=comma, column type=r,
+    columns/Coefficient/.style={column type=c,string type},
+    ]{tables/result_models.parameters.csv}
+\end{table}
+
+The validations of these identified models and a closer examination of the identified parameters are presented in this section; The Reference model is compared with the VCT data in \autoref{sec:result_VCT}; All of the models are compared with: the manoeuvring model tests in \autoref{sec:result_MDL}, and with an idealized wind condition in \autoref{sec:wind_state}.

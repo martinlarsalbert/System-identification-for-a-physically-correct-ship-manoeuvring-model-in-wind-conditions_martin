@@ -1,0 +1,40 @@
+The parameters within the Reference model are identified by regression on a dataset of virtual captive test (VCT). VCT are computational fluid dynamics (CFD) where the state has been varied according to \autoref{tab:vct_variations}. For instance in the VCT Circle yaw rate $r$ is varied while: surge velocity $u$ is constant, no drift angle ($v=0$), no rudder angle, and the propeller is at the self propulsion point ($\eta_0=1$).
+
+The regression is conducted with ordinary least squares (OLS) multiple linear regression. However, instead of regressing all of the parameters at the same time, the regression is divided into many sub regressions in order to reduce the multicollinearity. The regressions are defined as a step wise process in a regression pipeline. 
+The regression pipeline works similarly of solving an equation system; for instance: ${X_{vv}}'$ is determined from the drift angle variation before the circle + drift variation is regressed, so that ${X_{vv}}'$ can be used as a known value when ${X_{vr}}'$ should be determined. The sub regressions must thus be performed in the correct order. 
+%The regression pipelines of the Abkowitz model (\autoref{tab:vct_pipeline_abkowitz}), and the Physics informed model (\autoref{tab:vct_pipeline_semiempirical}) are different. 
+The regression pipeline of the Physics informed model is shown in \autoref{tab:vct_pipeline_semiempirical}. The semi-empirical rudder is treated as a deterministic model and is therefore not included in the regression. The regression is instead performed on the hull forces $X_H,Y_H,N_H$ obtained from the VCT calculations. The total sway force $Y_D$, and total yawing moment $N_D$ are however used to determine the rudder hull interaction coefficients ${a_H}',{x_H}'$. 
+\begin{table}[h!]
+    \centering
+    \caption{Parameter variations in virtual captive tests where fixed value is indicated by -, varying value by $\sim$ and 0 means that the variable is zero.}
+    \label{tab:vct_variations}
+    \pgfplotstabletypeset[col sep=comma,
+    %columns={Test type,$u$,$v$,$r$,$\delta$,$\eta_0$},
+    columns/Test type/.style={string type, column type=l},
+    columns/$u$/.style={string type},
+    columns/$v$/.style={string type},
+    columns/$r$/.style={string type},
+    columns/delta/.style={string type},
+    columns/$eta_0$/.style={string type},
+    %columns/SI unit/.style={string type},
+    %columns/Physical quantity/.style={string type},
+    %columns/Denominator/.style={string type},
+    %column type=l,	% specify the align method
+    %every head row/.style={before row=\hline,after row=\hline},	% style the first row
+    %every last row/.style={after row=\hline},	% style the last row
+    ]{tables/virtual_captive_tests.csv"}
+\end{table}
+%\begin{table}[h!]
+%    \centering
+%    \caption{Pipeline for the VCT regression of the Abkowitz model}
+%    \label{tab:vct_pipeline_abkowitz}
+%    \pgfplotstabletypeset[col sep=comma, string type, column type=l
+%    ]{tables/method_VCT_regression.regression_pipeline_abkowitz.csv"}
+%\end{table}
+\begin{table}[h!]
+    \centering
+    \caption{Pipeline for the VCT regression of the Physics informed model}
+    \label{tab:vct_pipeline_semiempirical}
+    \pgfplotstabletypeset[col sep=comma, string type, column type=l
+    ]{tables/method_VCT_regression_abkowitz.regression_pipeline_semiempirical.csv"}
+\end{table}

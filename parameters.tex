@@ -1,0 +1,22 @@
+\begin{table}[h]
+    \centering
+    \caption{Semi-empirical rudder parameters.}
+    \label{tab:other_parameters}
+    \pgfplotstabletypeset[col sep=comma, column type=r,
+    columns/Parameter/.style={column type=c,string type},
+    columns/Parameter/.style={column type=c,string type},
+    columns/Parameter/.style={column type=c,string type},
+    ]{tables/result_models.other_parameters_mcol.csv}
+\end{table}
+\begin{table}[h]
+    \centering
+    \caption{Added masses.}
+    \label{tab:added_masses}
+    \pgfplotstabletypeset[col sep=comma, column type=r,
+    columns/Xudot/.style={column name=$X_{\dot{u}}$},
+    columns/Yvdot/.style={column name=$Y_{\dot{v}}$},
+    columns/Yrdot/.style={column name=$Y_{\dot{r}}$},
+    columns/Nvdot/.style={column name=$N_{\dot{v}}$},
+    columns/Nrdot/.style={column name=$N_{\dot{r}}$},
+    ]{tables/result_models.added_masses.csv}
+\end{table}

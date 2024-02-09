@@ -1,0 +1,6 @@
+Inverse dynamics is a widely used technique within robotics \citep{faber_inverse_2018}; It can be used to estimate the total forces ($X_D,Y_D,N_D$) acting on a ship during motions. The technique can be applied on data from a free model manoeuvring tests or real ship data. The total forces are calculated from the kinematics of the manoeuvring model (\autoref{eq:X} to \autoref{eq:N}). These equations require that the mass, added mass , and the full state of the ship is known -- so that data on the position and orientation of the ship as well as the higher states: velocities, and accelerations, are needed.
+However, in the model tests used in this paper, only the position and orientation of the ship model where measured;
+The higher states where therefore estimated with an extended Kalman filter (EKF) -- where the manoeuvring model was used as the predictor \citep{alexandersson_wpcc_2022}.
+
+The estimated inverse dynamics forces were regressed with ordinary least squares (OLS) multiple
+linear regression to identify the model parameters. The inverse dynamics regression was conducted on zigzag10/10, and zigzag20/20 model test data to port and starboard.  

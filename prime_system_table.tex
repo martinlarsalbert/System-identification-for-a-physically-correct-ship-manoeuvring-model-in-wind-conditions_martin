@@ -1,0 +1,14 @@
+\begin{table}[h]
+    \centering
+    \caption{Scalings with prime system}
+    \label{tab:prime_system}
+    \pgfplotstabletypeset[col sep=comma,
+        columns={Physical quantity,SI unit,Denominator},
+        columns/SI unit/.style={string type},
+        columns/Physical quantity/.style={string type},
+        columns/Denominator/.style={string type},
+        column type=l,	% specify the align method
+        every head row/.style={before row=\hline,after row=\hline},	% style the first row
+        every last row/.style={after row=\hline},	% style the last row
+    ]{tables/prime_system.prime_system.csv"}
+\end{table}

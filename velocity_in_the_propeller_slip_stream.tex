@@ -1,0 +1,70 @@
+According to momentum theory the mean axial flow velocity far downstream of the propeller $V_{\infty}$ is given by \autoref{eq:V_infty_semiempirical} \cite{brix_manoeuvring_1993} where the thrust coefficient $C_{Th}$ is calculated with \autoref{eq:C_Th_semiempirical} where $r_0$ is the propeller radius and the apparent velocity $V_A$ is given by \autoref{eq:V_A_semiempirical}.
+\begin{equation}
+    \label{eq:V_infty_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_infty_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:C_Th_semiempirical}
+    \input{equations/mathematical_model_kinetics.C_Th_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:V_A_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_A_semiempirical}
+\end{equation}
+
+The radius of the propeller slipstream far behind the propeller is given by \autoref{eq:r_infty_semiempirical}.
+\begin{equation}
+    \label{eq:r_infty_semiempirical}
+    \input{equations/mathematical_model_kinetics.r_infty_semiempirical}
+\end{equation}
+The velocity and the radius of the propeller slipstream at the position of the rudder can be calculated with \autoref{eq:V_x_C_semiempirical} and \autoref{eq:r_p_semiempirical} where $x$ is the distance between the propeller and the rudder.
+\begin{equation}
+    \label{eq:V_x_C_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_x_C_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:r_p_semiempirical}
+    \input{equations/mathematical_model_kinetics.r_p_semiempirical}
+\end{equation}
+Turbulent mixing of the slipstream and the surrounding flow will increase the radius $r_x$ by $r_\Delta$(\autoref{eq:r_Delta_semiempirical}) so that a corrected axial velocity $V_{xcorr}$ can be calculated according to \autoref{eq:V_x_corr_semiempirical}.
+\begin{equation}
+    \label{eq:r_Delta_semiempirical}
+    \input{equations/mathematical_model_kinetics.r_Delta_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:V_x_corr_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_x_corr_semiempirical}
+\end{equation}
+For a twin screw ship a small contribution from the yaw rate is also added to the velocity as seen in \autoref{eq:V_R_x_C_semiempirical}.
+\begin{equation}
+    \label{eq:V_R_x_C_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_R_x_C_semiempirical}
+\end{equation}
+The velocity for the covered part of the rudder is obtained by \autoref{eq:V_R_C_semiempirical}.
+\begin{equation}
+    \label{eq:V_R_C_semiempirical}
+    \input{equations/mathematical_model_kinetics.V_R_C_semiempirical}
+\end{equation}
+$V_{xcorr}$ is also used to calculate the lift diminished factor $\lambda_R$ together with the expressions in  \autoref{eq:lambda_R_semiempirical} to \autoref{eq:c_semiempirical}.
+\begin{equation}
+    \label{eq:lambda_R_semiempirical}
+    \input{equations/mathematical_model_kinetics.lambda_R_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:f_semiempirical}
+    \input{equations/mathematical_model_kinetics.f_semiempirical}
+\end{equation}
+%
+\begin{equation}
+    \label{eq:d_semiempirical}
+    \input{equations/mathematical_model_kinetics.d_semiempirical}
+\end{equation}
+\begin{equation}
+    \label{eq:c_semiempirical}
+    \input{equations/mathematical_model_kinetics.c_semiempirical}
+\end{equation}

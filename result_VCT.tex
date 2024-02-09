@@ -1,0 +1,33 @@
+Predictions with the identified Reference model were in good agreement with the corresponding VCT results as seen in \autoref{fig:vct}. The ranges of variations have been chosen to match the states of the model tests, where for instance 10 degrees is the largest drift angle recorded from the zigzag tests (\autoref{fig:vct_drift_angle}). The hull forces are almost linear for these small drift angles and yaw rates; The higher order terms in the hull force model (\autoref{eq:X_H},\autoref{eq:Y_H},\autoref{eq:N_H}) were thus omitted in the VCT, and ID regressions -- to reduce the multicollinearity.
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg[width=\textwidth]{figures/vct.VCT Drift angle.svg}
+         \caption{Drift angles.}
+         \label{fig:vct_drift_angle}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg[width=\textwidth]{figures/vct.VCT Circle.svg}
+         \caption{Yaw rates.}
+         \label{fig:vct_circle}
+     \end{subfigure}
+     %
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg[width=\textwidth]{figures/vct.VCT Rudder angle.svg}
+         \caption{Rudder angles.}
+         \label{fig:vct_rudder_angle}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.49\textwidth}
+         \centering
+         \includesvg[width=\textwidth]{figures/vct.VCT Thrust variation.svg}
+         \caption{Thrust variations at 10 degrees rudder angle.}
+         \label{fig:vct_thrust_variation}
+     \end{subfigure}
+     \caption{Forces and moments: total ($D$), hull ($H$), and rudders ($R$), from VCT (lines) and predictions with Reference model (x marks).}
+     \label{fig:vct}
+\end{figure}

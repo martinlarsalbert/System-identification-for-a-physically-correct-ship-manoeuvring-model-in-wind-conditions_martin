@@ -1,0 +1,14 @@
+Test type,Label,Features
+Rudder angle,${X_{R}}'$,${X_{\delta\delta}}'$
+Rudder angle,${Y_{D}}'$,${Y_{\delta}}'$ ${Y_{\delta\delta\delta}}'$
+Rudder angle,${N_{D}}'$,${N_{\delta}}'$ ${N_{\delta\delta\delta}}'$
+Self propulsion,${X_{D}}'$,${X_{u}}'$ ${X_{0}}'$
+Drift angle,${X_{D}}'$,${X_{vv}}'$
+Drift angle,${Y_{D}}'$,${Y_{vvv}}'$ ${Y_{v}}'$
+Drift angle,${N_{D}}'$,${N_{vvv}}'$ ${N_{v}}'$
+Circle,${X_{D}}'$,${X_{rr}}'$
+Circle,${Y_{D}}'$,${Y_{r}}'$ ${Y_{rrr}}'$
+Circle,${N_{D}}'$,${N_{rrr}}'$ ${N_{r}}'$
+Circle + Drift,${X_{D}}'$,${X_{vr}}'$
+Circle + Drift,${Y_{D}}'$,${Y_{vvr}}'$ ${Y_{vrr}}'$
+Circle + Drift,${N_{D}}'$,${N_{vrr}}'$ ${N_{vvr}}'$
